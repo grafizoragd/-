@@ -1,0 +1,535 @@
+:root {
+    /* Brandable Theme */
+    --brand: #6ca8ff;
+    /* primary (soft sky blue) */
+    --brand-2: #98b6ff;
+    /* accent */
+    --brand-dark: #1f3b7b;
+    /* deep blue for headings */
+    --ink: #0f172a;
+    /* text */
+    --muted: #546182;
+    /* muted text */
+    --bg: #f6f9ff;
+    /* page background */
+    --card: #ffffff;
+    /* card background */
+    --line: #e6eeff;
+    /* subtle lines */
+    --shadow: 0 10px 30px rgba(36, 78, 170, .15);
+    --radius: 22px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    color: var(--ink);
+    background: radial-gradient(1200px 800px at 85% -10%, #e8f1ff 20%, transparent 60%), var(--bg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* ---------- Utilities ---------- */
+.container {
+    width: min(1140px, 92vw);
+    margin: 0 auto
+}
+
+.grid {
+    display: grid;
+    gap: 28px
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 20px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .25s ease, background .3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    color: #fff;
+    box-shadow: var(--shadow)
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px)
+}
+
+.btn-ghost {
+    background: rgba(255, 255, 255, .35);
+    backdrop-filter: blur(6px);
+    border-color: #fff4;
+    color: var(--brand-dark)
+}
+
+.tag {
+    font-size: 12px;
+    letter-spacing: .12em;
+    color: var(--brand-dark);
+    background: #eaf2ff;
+    padding: 8px 12px;
+    border-radius: 999px;
+    display: inline-block
+}
+
+.section {
+    padding: 86px 0
+}
+
+.title {
+    font-size: 42px;
+    line-height: 1.1;
+    color: var(--brand-dark);
+    margin: 10px 0 16px
+}
+
+.lead {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 60ch
+}
+
+/* ---------- Navbar ---------- */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: saturate(160%) blur(12px);
+    background: linear-gradient(180deg, rgba(255, 255, 255, .7), rgba(255, 255, 255, .45));
+    border-bottom: 1px solid #ffffff60
+}
+
+.nav .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    color: var(--brand-dark);
+    text-decoration: none
+}
+
+.logo-mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    display: grid;
+    place-items: center;
+    color: white;
+    font-weight: 900
+}
+
+.menu {
+    display: flex;
+    gap: 18px;
+    align-items: center
+}
+
+.menu a {
+    color: #223;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: .8
+}
+
+.menu a:hover {
+    opacity: 1
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    position: relative;
+    padding: 110px 0 80px;
+    overflow: clip
+}
+
+.hero .container {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center
+}
+
+.blob {
+    position: absolute;
+    inset: -20% -20% auto auto;
+    width: 720px;
+    height: 720px;
+    filter: blur(44px);
+    opacity: .55;
+    background: conic-gradient(from 180deg, #cfe1ff, #b3c8ff, #e6f0ff, #cfe1ff);
+    border-radius: 50%;
+    animation: spin 22s linear infinite
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.hero-ill {
+    position: relative;
+    aspect-ratio: 1/1;
+    border-radius: 28px;
+    background: radial-gradient(60% 60% at 70% 30%, #fff 0 30%, #e9f1ff 60%, #e1ecff 75%, #d6e5ff 100%);
+    box-shadow: var(--shadow);
+    display: grid;
+    place-items: center;
+    isolation: isolate;
+}
+
+.phone {
+    width: min(320px, 60%);
+    height: auto;
+    border-radius: 34px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 12px 40px rgba(20, 40, 120, .15);
+    position: relative
+}
+
+.phone .bar {
+    height: 8px;
+    width: 40%;
+    background: #eef3ff;
+    border-radius: 999px;
+    margin: 8px auto 18px
+}
+
+.card-ui {
+    background: #f8fbff;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 16px;
+    margin: 12px 0
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 18px;
+    padding: 10px 14px;
+    background: #fff;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    font-weight: 600
+}
+
+.bubble.b1 {
+    top: 10%;
+    left: -6%
+}
+
+.bubble.b2 {
+    bottom: 14%;
+    right: -6%
+}
+
+/* ---------- Services ---------- */
+.services {
+    grid-template-columns: repeat(12, 1fr)
+}
+
+.service-card {
+    grid-column: span 4;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 26px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform .2s ease
+}
+
+.service-card:hover {
+    transform: translateY(-6px)
+}
+
+.service-card .s-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    color: #fff;
+    box-shadow: var(--shadow)
+}
+
+.service-card h3 {
+    margin: 16px 0 6px;
+    color: var(--brand-dark)
+}
+
+.service-card p {
+    color: var(--muted);
+    margin: 0
+}
+
+/* ---------- Portfolio ---------- */
+.port-row {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(220px, 1fr));
+    gap: 18px;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px
+}
+
+.work {
+    scroll-snap-align: start;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 14px;
+    box-shadow: var(--shadow)
+}
+
+.work .thumb {
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, #e6efff, #f4f7ff);
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    color: var(--brand-dark)
+}
+
+/* ---------- Pricing ---------- */
+.pricing {
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.price-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px
+}
+
+.price-card .p-badge {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #eff5ff;
+    color: var(--brand-dark);
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 12px
+}
+
+.price {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--brand-dark);
+    margin: 10px 0
+}
+
+.feat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2b3553;
+    margin: 10px 0
+}
+
+.feat svg {
+    flex: 0 0 20px
+}
+
+/* ---------- Testimonials ---------- */
+.t-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px
+}
+
+.t-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 22px
+}
+
+.t-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+}
+
+/* ---------- Contact ---------- */
+.contact {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 28px;
+    align-items: center
+}
+
+form {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 22px;
+    display: grid;
+    gap: 14px
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    outline: none;
+    font: inherit;
+    background: #fbfdff
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical
+}
+
+/* ---------- Footer ---------- */
+footer {
+    padding: 36px 0 60px;
+    margin-top: 60px;
+    border-top: 1px solid var(--line);
+    background: linear-gradient(180deg, #ffffffcc, #f7fbff)
+}
+
+.f-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr .8fr;
+    gap: 24px
+}
+
+.f-col a {
+    display: block;
+    color: #2b3553;
+    opacity: .8;
+    margin: 6px 0;
+    text-decoration: none
+}
+
+.f-col a:hover {
+    opacity: 1
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+    .hero .container {
+        grid-template-columns: 1fr
+    }
+
+    .contact {
+        grid-template-columns: 1fr
+    }
+
+    .pricing {
+        grid-template-columns: 1fr;
+    }
+
+    .t-wrap {
+        grid-template-columns: 1fr
+    }
+
+    .services {
+        grid-template-columns: 1fr
+    }
+
+    .service-card {
+        grid-column: auto
+    }
+}
+
+/* ---------- Scroll Reveal ---------- */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity .6s ease, transform .6s ease
+}
+
+[data-reveal].show {
+    opacity: 1;
+    transform: none
+}
+
+/* Navbar container */
+.nav {
+  width: 100%;
+  padding: 16px 32px;
+  background: white;
+  position: fixed; /* biar selalu di atas */
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.nav .container.wrap {
+  display: flex;
+  justify-content: space-between; /* logo kiri, menu kanan */
+  align-items: center;
+}
+
+/* Logo */
+.logo-img {
+  width: 150px;   /* kecilin ukuran biar proporsional */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 24px; /* jarak antar link */
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* gambar tidak gepeng */
+  border-radius: 12px; /* opsional, biar sudut melengkung */
+}

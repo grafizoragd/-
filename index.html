@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grafizora — Jasa Desain Grafis</title>
+    <meta name="description"
+        content="Grafizora: Jasa desain grafis & editing. Poster, feeds IG, pamflet, promosi, CV, portofolio, book cover, PPT, undangan, dll." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Cursor blob -->
+    <div id="blob"
+        style="position:fixed; inset:auto auto 0 0; width:220px; height:220px; pointer-events:none; border-radius:50%; background:radial-gradient(circle at 30% 30%, rgba(108,168,255,.25), rgba(152,182,255,.18), transparent 60%); filter:blur(22px); z-index:0; transform:translate(-50%,-50%);">
+    </div>
+
+    <!-- Navbar -->
+    <nav class="nav">
+        <div class="container wrap">
+            <a class="logo" href="#home">
+                <img src="logo.png" alt="Grafizora Logo" class="logo-img">
+            </a>
+
+            <div class="menu">
+                <a href="#layanan">Layanan</a>
+                <a href="#portofolio">Portofolio</a>
+                <a href="#harga">Harga</a>
+                <a href="#kontak">Kontak</a>
+                <a class="btn btn-primary"
+                    href="https://wa.me/6281234567890?text=Halo%20Grafizora%2C%20saya%20butuh%20jasa%20desain"
+                    target="_blank" rel="noopener">Pesan via WhatsApp</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <header id="home" class="hero">
+        <div class="blob"></div>
+        <div class="container">
+            <div>
+                <span class="tag" data-reveal>Jasa Desain Grafis & Editing</span>
+                <h1 class="title" data-reveal style="transition-delay:.06s">Bikin Desain <span
+                        style="background:linear-gradient(135deg,var(--brand),var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent">bagus
+                        banget</span> itu <br />urusan <span style="white-space:nowrap">Grafizora ✨</span></h1>
+                <p class="lead" data-reveal style="transition-delay:.12s">Poster, Feeds IG, Pamflet, Promosi, CV,
+                    Portofolio, Book Cover, PPT, Undangan, dan lainnya. Desain rapi, warna soft, siap pakai.</p>
+                <div style="display:flex; gap:12px; margin-top:18px" data-reveal style="transition-delay:.18s">
+                    <a class="btn btn-primary" href="#portofolio">Lihat Portofolio</a>
+                    <a class="btn btn-ghost" href="https://instagram.com/grafizora_" target="blank"
+                        rel="noopener">@grafizora_</a>
+                </div>
+            </div>
+            <div class="hero-ill" aria-hidden="true" data-reveal style="transition-delay:.18s">
+                <div class="bubble b1">Content Planner</div>
+                <div class="bubble b2">Wedding Invite</div>
+                <div class="phone">
+                    <div class="bar"></div>
+                    <div class="card-ui">Template Feeds • Grid</div>
+                    <div class="card-ui">Story • 9:16 • Anim</div>
+                    <div class="card-ui">Poster • A3 • Print</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section id="layanan" class="section">
+        <div class="container">
+            <h2 class="title" data-reveal>Layanan yang Kami Sediakan</h2>
+            <p class="lead" data-reveal style="transition-delay:.08s">Semua dikerjakan dengan teliti, file siap cetak &
+                siap upload. Kamu tinggal duduk manis ✌</p>
+            <div class="grid services" style="margin-top:24px">
+                <article class="service-card" data-reveal>
+                    <div class="s-icon">🎯</div>
+                    <h3>Desain Cetak</h3>
+                    <p>Poster, Infografis, Banner, Spanduk, Undangan Cetak, Pamflet, Cover Buku, Sertifikat & Packaging
+                        Design</p>
+                </article>
+                <article class="service-card" data-reveal style="transition-delay:.06s">
+                    <div class="s-icon">📱</div>
+                    <h3>Desain Digital & Branding</h3>
+                    <p>CV Kreatf/ ATS, Portofolio, Mockup Design </p>
+                </article>
+                <article class="service-card" data-reveal style="transition-delay:.12s">
+                    <div class="s-icon">💍</div>
+                    <h3>Sosial Media</h3>
+                    <p>Feeds Instagram Carousel, Puzzle Feed, Content Planner IG, </p>
+                </article>
+                <article class="service-card" data-reveal style="transition-delay:.18s">
+                    <div class="s-icon">🧾</div>
+                    <h3>Desain Website</h3>
+                    <p>Website Toko, Web Portofolio, Website Company Profile & Undangan Website</p>
+                </article>
+                <article class="service-card" data-reveal style="transition-delay:.24s">
+                    <div class="s-icon">🎤</div>
+                    <h3>Aplikasi & Media Pembelajaran</h3>
+                    <p>PPT, Modul Ajar, Buku Belajar Anak TK, Animasi Pembelajaran & Aplikasi Pembelajaran 2D/ 3D
+                        Interaktif</p>
+                </article>
+                <article class="service-card" data-reveal style="transition-delay:.30s">
+                    <div class="s-icon">🪄</div>
+                    <h3>Editing & Retouch</h3>
+                    <p>Perapihan layout, warna, retouch foto, dan final artwork.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portofolio" class="section">
+        <div class="container">
+            <div style="display:flex; align-items:end; justify-content:space-between; gap:18px">
+                <div>
+                    <h2 class="title" data-reveal>Portofolio Pilihan</h2>
+                    <p class="lead" data-reveal style="transition-delay:.06s">Swipe kanan-kiri untuk lihat contoh karya.
+                    </p>
+                </div>
+                <a class="btn btn-ghost" href="https://instagram.com/grafizora_" target="_blank" rel="noopener"
+                    data-reveal style="transition-delay:.12s">Lihat semua di Instagram</a>
+            </div>
+            <div class="port-row" style="margin-top:18px">
+                <div class="work" data-reveal>
+                    <div class="thumb">
+                        <img src="assets/img/portfolio/content-planner.jpg" alt="Content Planner">
+                    </div>
+                </div>
+                <div class="work" data-reveal style="transition-delay:.04s">
+                    <div class="thumb">
+                        <img src="assets/img/portfolio/wedding-invite.jpg" alt="Wedding Invite">
+                    </div>
+                </div>
+                <div class="work" data-reveal style="transition-delay:.08s">
+                    <div class="thumb">
+                        <img src="assets/img/portfolio/book-cover.jpg" alt="Book Cover">
+                    </div>
+                </div>
+                <div class="work" data-reveal style="transition-delay:.12s">
+                    <div class="thumb">
+                        <img src="assets/img/portfolio/poster-event.jpg" alt="Poster Event">
+                    </div>
+                </div>
+                <div class="work" data-reveal style="transition-delay:.16s">
+                    <div class="thumb">
+                        <img src="assets/img/portfolio/cv-modern.jpg" alt="CV Modern">
+                    </div>
+                </div>
+                <div class="work" data-reveal style="transition-delay:.20s">
+                    <div class="thumb">
+                        <img src="assets/img/portfolio/carousel-1.jpg" alt="Carousel IG">
+                    </div>
+                </div>
+                <div class="work" data-reveal style="transition-delay:.24s">
+                    <div class="thumb">
+                        <img src="assets/img/portfolio/carousel-2.jpg" alt="Carousel IG">
+                    </div>
+                </div>
+                <div class="work" data-reveal style="transition-delay:.28s">
+                    <div class="thumb">
+                        <img src="assets/img/portfolio/carousel-3.jpg" alt="Carousel IG">
+                    </div>
+                </div>
+                <div class="work" data-reveal style="transition-delay:.32s">
+                    <div class="thumb">
+                        <img src="assets/img/portfolio/carousel-4.jpg" alt="Carousel IG">
+                    </div>
+                </div>
+                <div class="work" data-reveal style="transition-delay:.36s">
+                    <div class="thumb">
+                        <img src="assets/img/portfolio/carousel-5.jpg" alt="Carousel IG">
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="harga" class="section">
+        <div class="container">
+            <h2 class="title" data-reveal>Paket Harga Simple</h2>
+            <p class="lead" data-reveal style="transition-delay:.06s">Harga fleksibel sesuai kebutuhan. Untuk paket
+                custom, tinggal chat ya 😉</p>
+            <div class="grid pricing" style="margin-top:20px">
+                <div class="price-card" data-reveal>
+                    <span class="p-badge">Starter</span>
+                    <div class="price">Rp 35K</div>
+                    <div class="feat">✔ 1 desain (poster/slide)</div>
+                    <div class="feat">✔ Revisi 1x</div>
+                    <div class="feat">✔ File JPG/PNG</div>
+                    <a class="btn btn-primary"
+                        href="https://wa.me/6281234567890?text=Halo%20Grafizora%2C%20saya%20pesan%20paket%20Starter"
+                        target="_blank" rel="noopener">Pilih Paket</a>
+                </div>
+                <div class="price-card" data-reveal style="transition-delay:.08s">
+                    <span class="p-badge">Popular</span>
+                    <div class="price">Rp 85K</div>
+                    <div class="feat">✔ 3 desain (mix)</div>
+                    <div class="feat">✔ Revisi 3x</div>
+                    <div class="feat">✔ Source file (opsional)</div>
+                    <a class="btn btn-primary"
+                        href="https://wa.me/6281234567890?text=Halo%20Grafizora%2C%20saya%20pesan%20paket%20Popular"
+                        target="_blank" rel="noopener">Pilih Paket</a>
+                </div>
+                <div class="price-card" data-reveal style="transition-delay:.16s">
+                    <span class="p-badge">Brand Kit</span>
+                    <div class="price">Rp 150K+</div>
+                    <div class="feat">✔ Feeds, story, highlight</div>
+                    <div class="feat">✔ Warna & tipografi</div>
+                    <div class="feat">✔ Template planner</div>
+                    <a class="btn btn-primary"
+                        href="https://wa.me/6281234567890?text=Halo%20Grafizora%2C%20saya%20pesan%20paket%20Brand%20Kit"
+                        target="_blank" rel="noopener">Pilih Paket</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <h2 class="title" data-reveal>Kata Mereka</h2>
+            <div class="t-wrap" style="margin-top:12px">
+                <article class="t-card" data-reveal>
+                    <div class="t-head">
+                        <div class="avatar"></div>
+                        <div><strong>Hanif</strong>
+                            <div style="color:var(--muted); font-size:14px">Online Shop Owner</div>
+                        </div>
+                    </div>
+                    "Desainnya rapi & cepat, tinggal kirim brief udah fix!"
+                </article>
+                <article class="t-card" data-reveal style="transition-delay:.08s">
+                    <div class="t-head">
+                        <div class="avatar"></div>
+                        <div><strong>Lookmind</strong>
+                            <div style="color:var(--muted); font-size:14px">Creator</div>
+                        </div>
+                    </div>
+                    "Warna soft-nya enak dilihat. Cocok buat brand yang calm."
+                </article>
+                <article class="t-card" data-reveal style="transition-delay:.16s">
+                    <div class="t-head">
+                        <div class="avatar"></div>
+                        <div><strong>Client IG</strong>
+                            <div style="color:var(--muted); font-size:14px">Event Staff</div>
+                        </div>
+                    </div>
+                    "Poster event jadi terlihat profesional dan informatif."
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="kontak" class="section">
+        <div class="container contact">
+            <div>
+                <h2 class="title" data-reveal>Siap Kolaborasi?</h2>
+                <p class="lead" data-reveal style="transition-delay:.06s">Cerita kebutuhanmu di sini atau klik tombol
+                    WhatsApp. Balasnya fast-respon selama jam kerja.</p>
+                <div style="display:flex; gap:12px; margin-top:12px" data-reveal style="transition-delay:.12s">
+                    <a class="btn btn-primary"
+                        href="https://wa.me/6281234567890?text=Halo%20Grafizora%2C%20saya%20ingin%20tanya%20jasa%20desain"
+                        target="_blank" rel="noopener">Chat WhatsApp</a>
+                    <a class="btn btn-ghost" href="mailto:grafizora@gmail.com">Email</a>
+                </div>
+            </div>
+            <form onsubmit="sendEmail(event)" data-reveal>
+                <input required placeholder="Nama" />
+                <input required type="email" placeholder="Email" />
+                <input placeholder="Subjek (opsional)" />
+                <textarea placeholder="Ceritakan kebutuhan desainmu…"></textarea>
+                <button class="btn btn-primary" type="submit">Kirim</button>
+                <small style="color:var(--muted)">Form ini demo. Untuk fast respon, gunakan WhatsApp ya.</small>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container f-grid">
+            <div>
+                <a class="logo" href="#home">
+                    <img src="logo2.png" alt="Grafizora Logo" class="logo-img">
+                </a>
+                <p class="lead" style="margin-top:8px">Jasa Desain Grafis & Editing. Soft, rapi, elegan.</p>
+            </div>
+            <div class="f-col">
+                <strong>Menu</strong>
+                <a href="#layanan">Layanan</a>
+                <a href="#portofolio">Portofolio</a>
+                <a href="#harga">Harga</a>
+                <a href="#kontak">Kontak</a>
+            </div>
+            <div class="f-col">
+                <strong>Kontak</strong>
+                <a href="mailto:grafizora@gmail.com">grafizora@gmail.com</a>
+                <a href="https://instagram.com/grafizora_" target="blank" rel="noopener">Instagram @grafizora</a>
+                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
