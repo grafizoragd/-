@@ -533,3 +533,212 @@ footer {
   object-fit: cover;  /* gambar tidak gepeng */
   border-radius: 12px; /* opsional, biar sudut melengkung */
 }
+
+
+
+/* 1. Biar semua konten gak overflow ke samping */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* 2. Gambar & elemen biar gak lebih besar dari layar */
+img, iframe, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 3. Buat teks lebih proporsional di HP */
+h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem); /* auto skala */
+}
+p {
+  font-size: clamp(0.9rem, 4vw, 1.2rem);
+}
+
+/* 4. Tambahin media query khusus mobile */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero h1,
+  .hero p {
+    text-align: left;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.section {
+  padding: 40px 20px; /* biar lebih rapat di HP */
+}
+
+
+footer {
+  background: #fff;
+  padding: 40px 20px;
+}
+
+footer .f-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 60px; /* default jarak antar kolom */
+}
+
+/* blok pertama (logo + teks) biarkan tetap sendiri */
+footer .f-grid > div:first-child {
+  margin-right: auto; /* supaya nempel ke kiri */
+}
+
+/* rapatin Menu + Kontak */
+@media (min-width: 769px) {
+  footer .f-grid .f-col {
+    margin-right: 40px; /* bisa disesuaikan, ini jarak antar kolom */
+  }
+}
+
+/* di HP tetap normal */
+@media (max-width: 768px) {
+  footer .f-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+/* Import font aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #fafafa;
+}
+
+/* Navbar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 6%;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav .logo-img {
+  height: 380px;
+}
+
+.nav .menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav .menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* efek hover aesthetic */
+.nav .menu a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #6c63ff;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.nav .menu a:hover {
+  color: #6c63ff;
+}
+
+.nav .menu a:hover::after {
+  width: 100%;
+}
+
+/* Tombol khusus */
+.nav .menu .btn {
+  background: #6c63ff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.nav .menu .btn:hover {
+  background: #5548d6;
+}
+
+/* Responsive di HP */
+@media (max-width: 768px) {
+  .nav {
+    padding: 10px 4%;
+  }
+
+  .nav .logo-img {
+    height: 32px;
+  }
+
+  .nav .menu {
+    gap: 12px;
+  }
+
+  .nav .menu a {
+    font-size: 13px;
+  }
+
+  .nav .menu .btn {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+
+
+.slider {
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.slide-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-track img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+}
